@@ -40,3 +40,21 @@ def read_valid_password(promptMsg):
             continue
 
         return password
+
+
+def confirm_password(promptMsg, password):
+    
+    attemps = 3
+
+    while attemps > 0:
+        confirm_pass = input(promptMsg).strip()
+
+        if password == confirm_pass:
+            print("\033[32m" + "Password confirmed successfully." + "\033[0m")
+            return True
+        else:
+            print("\033[31m" + f"You have {attemps-1} attemps left" + "\033[0m")
+            print("\033[31m" + "Password not matched, please try again" + "\033[0m")
+            attemps -= 1 
+    
+    return False
