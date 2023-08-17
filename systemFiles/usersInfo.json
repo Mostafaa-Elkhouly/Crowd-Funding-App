@@ -2,6 +2,18 @@
   {
     "fname": "mostafa",
     "lname": "elkhouly",
-    "email": true
+    "email": "m@m.com"
+  },
+  {
+    "fname": "omar",
+    "lname": "khaled",
+    "email": "o@o.com"
+  },
+  {
+    "fname": "ahmed",
+    "lname": "wael",
+    "email": "w@w.com",
+    "passord": "AAAAAAaaa5$",
+    "mobile": ""
   }
 ]

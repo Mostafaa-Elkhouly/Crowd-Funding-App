@@ -15,7 +15,7 @@ def read_valid_email(promptMsg):
         email = input(promptMsg).strip().lower()
 
         if re.match(pattern, email) is not None:
-            return True
+            return email
         else:
-            print("\033[31m" + "please enter a valid string containing only characters." + "\033[0m")
+            print("\033[31m" + "please enter a valid email address." + "\033[0m")
 

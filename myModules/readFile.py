@@ -8,8 +8,8 @@ def read_all_usersInfo():
             if len(data) > 0:
                 return data
             
-            return list()
-        
+            return "[]"
+            
     except Exception as e:
         print("\033[31m"+ f"ERROR: {e}" + "\033[0m")
 
