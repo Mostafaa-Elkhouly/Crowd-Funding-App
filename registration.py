@@ -4,11 +4,11 @@ import myModules as md
 
 def register_user():
 
-    print("---------------- registration Form -----------------")
+    print("---------------- Registration Form -----------------")
 
     fname = md.read_valid_string_input("Enter Your First Name: ")
     lname = md.read_valid_string_input("Enter Your Last Name: ")
-    email = md.read_valid_email("Enter Your Email Address: ")
+    email = md.read_valid_email("Enter Your Email Address: ", True)
     password = md.read_valid_password("Enter Your Password: ")
     checkTrue = md.confirm_password("Confirm Your New Password: ", password)
 

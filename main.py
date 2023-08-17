@@ -6,8 +6,8 @@ import registration as r
 import login as l
 
 table = [
-    ["Press 1","To Register For New Account"],
-    ["Press 2","If Have Already Existing Account"]
+    ["Press 1","To Register: For New Account"],
+    ["Press 2","To Login:    If You Already Have an Existing Account"]
     ]
 
 while True:
@@ -20,7 +20,7 @@ while True:
             r.register_user()
         elif integer_value == 2:
             os.system('clear')
-            l.login_user()
+            l.login()
         else:
             raise ValueError
 
