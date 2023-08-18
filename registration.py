@@ -29,7 +29,7 @@ def register_user():
         "mobile":mobNumber
     }
 
-    md.write_data(userinfo)
+    md.write_data(userinfo, "users_info.json")
     print("\033[32m" + f"User {fname} {lname} registered successfully." + "\033[0m")
 
 

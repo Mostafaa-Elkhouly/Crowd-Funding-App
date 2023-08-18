@@ -4,10 +4,11 @@ import os
 from tabulate import tabulate
 import registration as r
 import login as l
+import projects
 
 table = [
     ["Press 1","To Register: For New Account"],
-    ["Press 2","To Login:    If You Already Have an Existing Account"]
+    ["Press 2","To Login   : If You Already Have an Existing Account"]
     ]
 
 while True:
@@ -20,10 +21,11 @@ while True:
             r.register_user()
         elif integer_value == 2:
             os.system('clear')
-            l.login()
+            userEmail = l.login()
+            os.system('clear')
+            projects.projectsMenu(userEmail)
         else:
             raise ValueError
-
-        break  
+        break
     except ValueError:
         print("\033[31m" + "Invalid input. Please enter an integer." + "\033[0m")

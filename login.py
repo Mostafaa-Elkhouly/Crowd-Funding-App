@@ -7,7 +7,7 @@ def login():
 
     print("---------------- Login Form -----------------")
 
-    users = md.read_all_usersInfo()
+    users = md.read_all_data("users_info.json")
 
     while True:
         email = md.read_valid_email("Enter Your Email Address: ", "login")
@@ -20,7 +20,7 @@ def login():
                 
                 if password == user["password"]:
                     print("\033[32m" + "Login successful!" + "\033[0m")
-                    return
+                    return user["email"]
                 else:
                     print("\033[31m" + "Incorrect password." + "\033[0m")
                     break

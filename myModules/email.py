@@ -19,7 +19,7 @@ def read_valid_email(promptMsg, status="registration"):
     pattern = r'^[a-zA-Z0-9._]+@[a-zA-Z]+\.[a-zA-Z]+$'
     
     try:
-        user_list = md.read_all_usersInfo()
+        user_list = md.read_all_data("users_info.json")
 
         while True:
             email = input(promptMsg).strip().lower()

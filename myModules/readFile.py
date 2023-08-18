@@ -2,9 +2,9 @@
 
 import json
 
-def read_all_usersInfo():
+def read_all_data(filename):
     try:
-        with open("./systemFiles/usersInfo.json", 'r') as fileObject:
+        with open(f"./systemFiles/{filename}", 'r') as fileObject:
             data_str = fileObject.read()
             
             if len(data_str) > 0:
@@ -12,7 +12,7 @@ def read_all_usersInfo():
                 data = json.loads(data_str)
                 return data
             
-            return list()
+            return list
             
     except Exception as e:
         print("\033[31m"+ f"ERROR: {e}" + "\033[0m")
