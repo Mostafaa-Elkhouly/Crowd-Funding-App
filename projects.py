@@ -5,7 +5,7 @@ import myModules as md
 from addProject import createProject
 from listProjects import viewAllProjects
 from modifyProject import editProject
-from modifyProject import deleteProject
+from deleteProject import deleteProject
 from searchProject import serchForProject
 
 def projectsMenu(userEmail):
@@ -18,6 +18,7 @@ def projectsMenu(userEmail):
         ["Press 3","To Edit a Project"],
         ["Press 4","To Delete a Project"],
         ["Press 5","To search for a project using date"],
+        ["Press 0","To EXIT!"],
         ]
 
     while True:
@@ -35,8 +36,11 @@ def projectsMenu(userEmail):
                 deleteProject()
             elif integer_value == 5:
                 serchForProject()
+            elif integer_value == 0:
+                md.clear_screen()
+                break
             else:
                 raise ValueError
-            break  
+
         except ValueError:
             print("\033[31m" + "Invalid input. Please enter an integer." + "\033[0m")

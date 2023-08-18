@@ -20,4 +20,4 @@ def createProject(userEmail):
     }
     
     md.write_user_projects_data(userEmail, projectInfo)
-    print("\033[32m" + f"Project {title} Added successfully." + "\033[0m")
+    print("\033[32m" + f'Project With Title "{title}" Added successfully.' + "\033[0m")

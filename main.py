@@ -1,14 +1,18 @@
 #! /usr/bin/python3
 
-import os
 from tabulate import tabulate
-import registration as r
-import login as l
-import projects
+import myModules as md
+from registration import register_user
+from login import login
+from projects import projectsMenu
+
+
+print("---------------- Main Menu -----------------")
 
 table = [
     ["Press 1","To Register: For New Account"],
-    ["Press 2","To Login   : If You Already Have an Existing Account"]
+    ["Press 2","To Login   : If You Already Have an Existing Account"],
+    ["Press 0","To EXIT    !!!!!"]
     ]
 
 while True:
@@ -17,15 +21,17 @@ while True:
     try:
         integer_value = int(val)
         if integer_value == 1:
-            os.system('clear')
-            r.register_user()
+            md.clear_screen()
+            register_user()
         elif integer_value == 2:
-            os.system('clear')
-            userEmail = l.login()
-            os.system('clear')
-            projects.projectsMenu(userEmail)
+            md.clear_screen()
+            userEmail = login()
+            md.clear_screen()
+            projectsMenu(userEmail)
+        elif integer_value == 0:
+            break
         else:
             raise ValueError
-        break
+        
     except ValueError:
         print("\033[31m" + "Invalid input. Please enter an integer." + "\033[0m")

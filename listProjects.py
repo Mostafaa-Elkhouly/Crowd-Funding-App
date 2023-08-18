@@ -5,6 +5,9 @@ import myModules as md
 
 def viewAllProjects(userEmail):
 
+    md.clear_screen()
+    print("---------------- View All Projects -----------------")
+
     project_info = md.read_project_data(userEmail)
 
     if len(project_info) > 0:
