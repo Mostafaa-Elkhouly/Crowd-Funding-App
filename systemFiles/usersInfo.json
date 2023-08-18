@@ -13,28 +13,35 @@
     "fname": "ahmed",
     "lname": "wael",
     "email": "w@w.com",
-    "passord": "AAAAAAaaa5$",
+    "password": "AAAAAAaaa5$",
     "mobile": ""
   },
   {
     "fname": "mahmoud",
     "lname": "samir",
     "email": "s@s.com",
-    "passord": "cccAA123++",
+    "password": "cccAA123++",
     "mobile": ""
   },
   {
     "fname": "ali",
     "lname": "aa",
     "email": "al@al.com",
-    "passord": "Aa++123ww",
+    "password": "Aa++123ww",
     "mobile": ""
   },
   {
     "fname": "mohamed",
     "lname": "saed",
     "email": "sa@sa.com",
-    "passord": "AAAaaa123++",
+    "password": "AAAaaa123++",
     "mobile": "01006285725"
+  },
+  {
+    "fname": "doha",
+    "lname": "gamal",
+    "email": "d@d.com",
+    "password": "Dd12345++",
+    "mobile": "01005254789"
   }
 ]

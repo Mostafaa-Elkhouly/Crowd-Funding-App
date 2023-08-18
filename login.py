@@ -7,7 +7,7 @@ def login():
 
     print("---------------- Login Form -----------------")
 
-    users = md.read_all_usersInfo
+    users = md.read_all_usersInfo()
 
     while True:
         email = md.read_valid_email("Enter Your Email Address: ", False)
@@ -16,7 +16,8 @@ def login():
         for user in users:
             if user["email"] == email:
                 found = True
-                password = md.read_valid_password("Enter Your Password: ")
+                print(user)
+                password = md.read_valid_password("Enter Your Password: ", False)
                 
                 if password == user["password"]:
                     print("\033[32m" + "Login successful!" + "\033[0m")

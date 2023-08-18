@@ -2,7 +2,7 @@
 
 import re
 
-def read_valid_email(promptMsg, instructions):
+def read_valid_email(promptMsg, instructions=True):
     
     if instructions == True:
         print("\033[33m" + "Email Address should by something like: ___@___.___ " + "\033[0m")

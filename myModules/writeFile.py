@@ -5,10 +5,7 @@ import json
 
 def write_data(info):
     try:
-        old_data_str = md.read_all_usersInfo()
-
-        # Convert the string to a list of dictionaries
-        old_data = json.loads(old_data_str)
+        old_data = md.read_all_usersInfo()
 
         with open("./systemFiles/usersInfo.json", 'w') as fileObject:
             old_data.append(info)
