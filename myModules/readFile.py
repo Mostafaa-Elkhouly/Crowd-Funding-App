@@ -12,7 +12,7 @@ def read_all_data(filename):
                 data = json.loads(data_str)
                 return data
             
-            return list
+            return list()
             
     except Exception as e:
         print("\033[31m"+ f"ERROR: {e}" + "\033[0m")

@@ -4,6 +4,9 @@ from tabulate import tabulate
 import myModules as md
 
 def projectsMenu(userEmail):
+        
+    print("---------------- Projects Form -----------------")
+
     table = [
         ["Press 1","To Create a New Project"],
         ["Press 2","To View All Projects"],
@@ -51,17 +54,8 @@ def createProject(userEmail):
         "startDate":startDate,
         "endDate":endDate
     }
-
-    users_projects = md.read_all_data("users_projects.json")
-
-    for user in users_projects:
-        if user["email"] == userEmail:
-            user["projects"].append(projectInfo)
-            break
-    else:
-        new_user = {"email": userEmail, "projects": [projectInfo]}
-        users_projects.append(new_user)
     
+    md.write_user_projects_data(userEmail, projectInfo)
     print("\033[32m" + f"Project {title} Added successfully." + "\033[0m")
 
 

@@ -1,0 +1,14 @@
+[
+  {
+    "email": "m@m.com",
+    "projects": [
+      {
+        "title": "project one",
+        "details": "my first project",
+        "target": 25000,
+        "startDate": "2023-08-18",
+        "endDate": "2023-08-20"
+      }
+    ]
+  }
+]
