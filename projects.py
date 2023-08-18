@@ -2,6 +2,11 @@
 
 from tabulate import tabulate
 import myModules as md
+from addProject import createProject
+from listProjects import viewAllProjects
+from modifyProject import editProject
+from modifyProject import deleteProject
+from searchProject import serchForProject
 
 def projectsMenu(userEmail):
         
@@ -35,50 +40,3 @@ def projectsMenu(userEmail):
             break  
         except ValueError:
             print("\033[31m" + "Invalid input. Please enter an integer." + "\033[0m")
-
-
-
-
-def createProject(userEmail):
-    
-    title = md.read_string_with_spaces("Enter Your Project Title: ")
-    details = md.read_string_with_spaces("Enter Your Project Details: ")
-    target = md.read_valid_number("Enter Your Project Total Target in EGP: ")
-    startDate = md.read_valid_date("Enter The Start Date of Your Campaign: ")
-    endDate = md.read_valid_date("Enter The End Date of Your Campaign: ")
-
-    projectInfo = {
-        "title":title,
-        "details":details,
-        "target":target,
-        "startDate":startDate,
-        "endDate":endDate
-    }
-    
-    md.write_user_projects_data(userEmail, projectInfo)
-    print("\033[32m" + f"Project {title} Added successfully." + "\033[0m")
-
-
-def viewAllProjects(userEmail):
-
-    project_info = md.read_project_data(userEmail)
-
-    if len(project_info) > 0:
-        for project in project_info["projects"]:
-
-            # Convert the dictionary to a list of [key, value] pairs
-            project_table = [[key, value] for key, value in project.items()]
-            print(tabulate(project_table, tablefmt="grid"))  
-    else: 
-        print("\033[34m" + "No Projects Found !!" + "\033[0m")
-
-
-def editProject(userEmail):
-    pass
-
-
-def deleteProject():
-    pass
-
-def serchForProject():
-    pass

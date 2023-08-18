@@ -1,6 +1,7 @@
 #! /usr/bin/python3
 
 import re
+import getpass
 
 def read_valid_password(promptMsg, status="registration"):
     
@@ -12,8 +13,8 @@ def read_valid_password(promptMsg, status="registration"):
         print("\033[33m" + "Password must contains at least one special character" + "\033[0m")
 
     while True:
-
-        password = input(promptMsg).strip()
+        
+        password = getpass.getpass(promptMsg).strip()
 
         # Check if length is between 8 and 20 characters
         if len(password) < 8 or len(password) > 20:
