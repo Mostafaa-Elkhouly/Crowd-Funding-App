@@ -2,9 +2,9 @@
 
 import re
 
-def read_valid_password(promptMsg, instructions=True):
+def read_valid_password(promptMsg, status="registration"):
     
-    if instructions == True:
+    if status == "registration":
         print("\033[33m" + "Password length must be greater than 8 and less than 20" + "\033[0m")
         print("\033[33m" + "Password must contains at least one upper case letter" + "\033[0m")
         print("\033[33m" + "Password must contains at least one lower case letter" + "\033[0m")

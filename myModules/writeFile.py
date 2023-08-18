@@ -1,7 +1,7 @@
 #! /usr/bin/python3
 
-import myModules as md
 import json
+import myModules as md
 
 def write_data(info):
     try:
