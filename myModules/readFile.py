@@ -17,4 +17,16 @@ def read_all_data(filename):
     except Exception as e:
         print("\033[31m"+ f"ERROR: {e}" + "\033[0m")
 
+
+def read_project_data(userEmail):
         
+    users_projects_list = read_all_data("users_projects.json")
+    
+    if len(users_projects_list)>0:
+
+        for user_projects in users_projects_list:
+
+            if user_projects["email"] == userEmail:
+                return user_projects
+    else:
+        return list()

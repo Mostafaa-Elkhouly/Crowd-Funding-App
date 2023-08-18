@@ -23,9 +23,9 @@ def projectsMenu(userEmail):
             if integer_value == 1:
                 createProject(userEmail)
             elif integer_value == 2:
-                viewAllProject(userEmail)
+                viewAllProjects(userEmail)
             elif integer_value == 3:
-                editProject()
+                editProject(userEmail)
             elif integer_value == 4:
                 deleteProject()
             elif integer_value == 5:
@@ -59,22 +59,23 @@ def createProject(userEmail):
     print("\033[32m" + f"Project {title} Added successfully." + "\033[0m")
 
 
-def viewAllProject(userEmail):
+def viewAllProjects(userEmail):
 
-    users_projects_list = md.read_all_data("users_projects.json")
-    projects = []
-    for user_projects in users_projects_list:
+    project_info = md.read_project_data(userEmail)
 
-        if user_projects["email"] == userEmail:
+    if len(project_info) > 0:
+        for project in project_info["projects"]:
 
-            for project in user_projects["projects"]:
+            # Convert the dictionary to a list of [key, value] pairs
+            project_table = [[key, value] for key, value in project.items()]
+            print(tabulate(project_table, tablefmt="grid"))  
+    else: 
+        print("\033[34m" + "No Projects Found !!" + "\033[0m")
 
-                # Convert the dictionary to a list of [key, value] pairs
-                project_table = [[key, value] for key, value in project.items()]
-                print(tabulate(project_table, tablefmt="grid"))   
 
-def editProject():
+def editProject(userEmail):
     pass
+
 
 def deleteProject():
     pass
