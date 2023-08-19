@@ -6,7 +6,7 @@ from addProject import createProject
 from listProjects import viewAllProjects
 from modifyProject import editProject
 from deleteProject import delete_project_by_title
-from searchProject import serchForProject
+from searchProject import search_projects_by_date
 
 def projectsMenu(userEmail):
         
@@ -35,7 +35,7 @@ def projectsMenu(userEmail):
             elif integer_value == 4:
                 delete_project_by_title(userEmail)
             elif integer_value == 5:
-                serchForProject()
+                search_projects_by_date(userEmail)
             elif integer_value == 0:
                 md.clear_screen()
                 break

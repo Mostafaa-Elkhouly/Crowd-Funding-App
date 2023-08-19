@@ -8,6 +8,13 @@
         "target": 25000,
         "startDate": "2023-08-18",
         "endDate": "2023-08-20"
+      },
+      {
+        "title": "project two",
+        "details": "my second project",
+        "target": 50000,
+        "startDate": "2023-08-19",
+        "endDate": "2023-09-15"
       }
     ]
   }
