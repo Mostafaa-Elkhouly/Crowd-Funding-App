@@ -5,7 +5,7 @@ import myModules as md
 from addProject import createProject
 from listProjects import viewAllProjects
 from modifyProject import editProject
-from deleteProject import deleteProject
+from deleteProject import delete_project_by_title
 from searchProject import serchForProject
 
 def projectsMenu(userEmail):
@@ -33,7 +33,7 @@ def projectsMenu(userEmail):
             elif integer_value == 3:
                 editProject(userEmail)
             elif integer_value == 4:
-                deleteProject()
+                delete_project_by_title(userEmail)
             elif integer_value == 5:
                 serchForProject()
             elif integer_value == 0:

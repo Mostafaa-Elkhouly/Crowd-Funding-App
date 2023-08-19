@@ -1,6 +1,5 @@
 #! /usr/bin/python3
 
-import json
 import myModules as md
 
 def editProject(userEmail):
@@ -8,7 +7,6 @@ def editProject(userEmail):
     md.clear_screen()
     print("---------------- Edit Project -----------------")
 
-    users_projects_list = md.read_all_data("users_projects.json")
     user_Projects = md.read_project_data(userEmail)
 
     if len(user_Projects) > 0:
